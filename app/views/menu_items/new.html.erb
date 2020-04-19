@@ -1,0 +1,18 @@
+<p class="NewMenuItem-title">Enter the Item details</p>
+<section class="MenuItemNew">
+  <%= form_with url: menu_items_path do |form|%>
+    <div class="Form-section">
+      <p class="ForInput-label">Name: </p>
+      <%= form.text_field :name, class: "FormInput"%>
+    </div>
+    <div class="Form-section">
+      <p class="ForInput-label">Description </p>
+      <%= form.text_area :description, class: "FormInput"%>
+    </div>
+     <div class="Form-section">
+      <p class="ForInput-label">Price: </p>
+      <%= form.number_field :price, class: "FormInput"%>
+    </div>
+    <%= form.submit "AddMenuItemToMenu!",class: "SubmitButton"%>
+  <% end %>
+</section>

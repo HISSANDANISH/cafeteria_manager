@@ -1,0 +1,14 @@
+.Body{
+  font-family: OpenSans,sans-serif;
+  max-width: 600px;
+  margin:0 auto;
+  margin-top: 32px;
+}
+.HomeTitle{
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+.HomeAuthentication{
+  font-size: 20px;
+  margin-bottom: 30px;
+}

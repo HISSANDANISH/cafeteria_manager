@@ -1,0 +1,10 @@
+<p class="NewMenu-title">Welcome New user!</p>
+<section class="MenuNew">
+  <%= form_with url: menus_path do |form|%>
+    <div class="Menu-section">
+      <p class="ForInput-label">Name: </p>
+      <%= form.text_field :name, class: "FormInput"%>
+    </div>
+    <%= form.submit "AddItemsToMenu!",class: "SubmitButton"%>
+  <% end %>
+</section>
