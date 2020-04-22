@@ -3,8 +3,11 @@ Rails.application.routes.draw do
   resources :menus
   get "/", to: "home#index"
   resources :users
+  resources :orders
+  resources :reports
+  resources :menu_items
   get "/signin", to: "sessions#new", as: :new_session
   post "/signin", to: "sessions#create", as: :session
-  post "/menu_items", to: "menu_items#create", as: :menu_items
-  get "/menu_items/new", to: "menu_items#new", as: :new_menu_items
+  delete "/signout", to: "sessions#destroy", as: :delete_sessions
+  get "/dashboard", to: "dashboard#index", as: :dashboard
 end

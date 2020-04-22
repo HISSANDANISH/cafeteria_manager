@@ -1,0 +1,28 @@
+.AddMenu{
+  height: 32px;
+  display: flex;
+}
+.Form-section{
+  margin-bottom: 30px;
+  display: flex;
+  align-items: stretch;
+}
+.AddMenu-button{
+  margin-left: 20px;
+}
+.MenuDisplay{
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+}
+.MenuName{
+  margin-top: 10px;
+  width: 180px;
+  margin-left: 40px;
+}
+.ActiveMenu-submit{
+  margin-left: 40px;
+}
+.EditMenu-submit{
+  margin-left: 40px;
+}

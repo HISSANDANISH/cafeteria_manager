@@ -11,6 +11,7 @@
   color: rgb(156, 153, 153)
 }
 .FormInput{
+  margin-left: 300px;
   font-size: 20px;
   padding: 6px;
 }
@@ -20,4 +21,7 @@
   border: 0;
   border-radius: 4px;
   color: rgb(38, 219, 38);
+}
+.UserDetails{
+  display: flex;
 }

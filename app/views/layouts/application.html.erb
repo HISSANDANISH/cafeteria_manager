@@ -9,7 +9,31 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body class="Body">
+  <body>
+    <% if @current_user %>
+      <p class="UserHeader">
+        Welcome <%= @current_user.name%>
+        <%= link_to "SignOut", delete_sessions_path,method: "delete"%>
+      </p>
+      <p class="SideBar-content">
+        <%= link_to "Menu", menus_path %>
+        <%= link_to "Orders", orders_path %>
+        <% if @current_user.role == "owner"%>
+          <%= link_to "Users", users_path %>
+          <%= link_to "Reports", users_path %>
+        <%end%>
+      </p>
+    <% end %>
+   <% if flash[:error] %>
+      <p class="Flash-error">
+        <%= flash[:error] %>
+      </p>
+    <% end %>
+    <% if flash[:success] %>
+      <p class="Flash-success">
+        <%= flash[:success]%>
+      </p>
+    <% end %>
     <%= yield %>
   </body>
 </html>

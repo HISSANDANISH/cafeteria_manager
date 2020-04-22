@@ -1,2 +1,21 @@
-<p>Welcome to MENU</p>
-<>
+<p class="NewMenu-title">Welcome to Menu</p>
+<section class="MenuNew">
+  <%= form_with(url: "/menus", method: "POST",class: "AddMenu") do %>
+    <%= text_field_tag("name","",placeholder: "New Menu?",class: "AddMenu-text",autofocus: "autofocus")%>
+    <%= button_tag("Add",type: "submit",class: "AddMenu-button")%>
+  <% end %>
+</section>
+<section>
+  <% Menu.all.each do |menus| %>
+    <div class="MenuDisplay">
+      <p class="MenuName"><%= menus.name %></p>
+      <%= form_with(url: "/menus/#{menus.id}",method: "PUT") do %>
+        <%= submit_tag("ActiveMenu",type: "submit",class: "ActiveMenu-submit")%>
+      <% end %>
+      <%= form_with(url: "/menu_items",method: "GET",local: true) do %>
+        <%  session[:current_menu_id] = menus.id%>
+        <%= submit_tag("editmenu",type: "submit",value: menus.id,class: "ActiveMenu-submit")%>
+      <% end %>
+    </div>
+  <% end %>
+</section>

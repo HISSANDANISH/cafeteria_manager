@@ -1,0 +1,19 @@
+<main class="UserPageMain">
+    <article>
+      <h1 class="UserPage-title">My To-do List</h1>
+      <%= link_to "AddUsers",new_user_path%>
+      <form action="/users/new" method = "get">
+        <input type="submit" value="Addusers">
+      </form>
+      <% User.all.each do |user|%>
+        <p class="UserDetails">
+          <%= user.name%>
+          <%= user.email%>
+          <%= user.phone%>
+          <%= user.password%>
+          <%= user.address%>
+          <%= user.role%>
+        </p>
+      <% end %>
+    </article>
+</main>

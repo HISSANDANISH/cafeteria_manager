@@ -1,8 +1,8 @@
-.Body{
+body{
   font-family: OpenSans,sans-serif;
-  max-width: 600px;
-  margin:0 auto;
+  max-width: 1000px;
   margin-top: 32px;
+  margin: 0 auto;
 }
 .HomeTitle{
   font-size: 30px;
@@ -11,4 +11,34 @@
 .HomeAuthentication{
   font-size: 20px;
   margin-bottom: 30px;
+}
+.sidebar{
+  margin-left: 0;
+}
+.UserHeader{
+  padding: 10px;
+  background-color: lightgrey;
+  font-size: 14px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.Form-section{
+  margin-bottom: 30px;
+}
+.ForInput-label{
+  font-size: 20px;
+  margin-bottom: 8px;
+  color: rgb(156, 153, 153)
+}
+.FormInput{
+  font-size: 20px;
+  padding: 6px;
+}
+.SubmitButton{
+  font-size: 20px;
+  padding: 20px;
+  border: 0;
+  border-radius: 4px;
+  color: rgb(38, 219, 38);
 }

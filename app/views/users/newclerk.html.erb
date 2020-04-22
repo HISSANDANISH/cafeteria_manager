@@ -1,6 +1,6 @@
 <p class="NewUsers-title">Welcome New user!</p>
 <section class="usersNew">
-  <%= form_with url: users_path do |form|%>
+  <%= form_with url: clerk_users_path do |form|%>
     <div class="Form-section">
       <p class="ForInput-label">Name: </p>
       <%= form.text_field :name, class: "FormInput"%>
@@ -21,11 +21,6 @@
       <p class="ForInput-label">Address: </p>
       <%= form.text_area :address, class: "FormInput"%>
     </div>
-    <% if session[:current_user_id] %>
-      <%= form.text_field :name, value: "clerk",class: "FormInput"%>
-    <% else %>
-      <%= form.text_field :name, value: "customer",class: "FormInput"%>
-    <% end %>
     <%= form.submit "SignUp!",class: "SubmitButton"%>
   <% end %>
 </section>
